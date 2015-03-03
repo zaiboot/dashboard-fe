@@ -1,26 +1,82 @@
 //dashboard.js
 (function($) {
-
+	var config = {
+		
+		Categories: [ "Not Started", "Pending", "Pending Modification", "Waiting on Review", 
+			"Review Pending Recertification", "Waiting on Approval", "Approval Pending Recertification",
+			"Complete"	
+		],
+		Series: [
+			
+			{
+				name: "Due Prior",
+				data: [ 
+					100, 
+					150, 
+					200, 
+					250, 
+					300, 
+					350, 
+					400, 
+					450
+				]
+			},
+			{
+				name: "Today",
+				data: [ 
+					90, 
+					190, 
+					45, 
+					521, 
+					300, 
+					350, 
+					444, 
+					500
+				]
+			},
+			{
+				name: "This week",
+				data: [ 
+					190, 
+					140, 
+					451, 
+					51, 
+					301, 
+					135, 
+					144, 
+					54
+				]
+			},
+			{
+				name: "After This week",
+				data: [ 
+					190, 
+					140, 
+					451, 
+					51, 
+					301, 
+					135, 
+					144, 
+					54
+				]
+			}
+		]
+	};
 	$("#chart").kendoChart({
                 title: {
-                    text: "Site Visitors Stats \n /thousands/"
+                    text: "Dashboard for"
                 },
                 legend: {
-                    visible: false
+                    visible: true
                 },
                 seriesDefaults: {
                     type: "bar",
-                  	stack: true
+                  	stack: true,
+					
                 },
-                series: [{
-                    name: "Total Visits",
-                    data: [56000, 63000, 74000, 91000, 117000, 138000]
-                }, {
-                    name: "Unique visitors",
-                    data: [52000, 34000, 23000, 48000, 67000, 83000]
-                }],
+                series: config.Series,
                 valueAxis: {
-                    max: 140000,
+                    max: 700,
                     line: {
                         visible: false
                     },
@@ -29,10 +85,8 @@
                     }
                 },
                 categoryAxis: {
-                    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-                    majorGridLines: {
-                        visible: false
-                    }
+                    categories: config.Categories,
+					color: "#5d5d5d"
                 },
                 tooltip: {
                     visible: true,
