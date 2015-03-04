@@ -64,9 +64,17 @@
 	};
 	$("#chart").kendoChart({
                 title: {
-                    text: "Dashboard for"
+                    text: "Chart for"
                 },
+				 chartArea: {
+					background: "transparent"
+				  },
                 legend: {
+					labels: {
+						color: "#5d5d5d"
+					},
+					position: "bottom",
+					orientation: "horizontal",
                     visible: true
                 },
                 seriesDefaults: {
@@ -74,9 +82,15 @@
                   	stack: true,
 					
                 },
+				seriesClick: function(e) {					
+					console.log("Category = ", e.category, " Series.name", e.series.name);
+					
+				},
+				seriesColors: [ "#96172e", "#2e64a7", "#c0d0e4", "#e1e8f2"],
                 series: config.Series,
                 valueAxis: {
                     max: 700,
+					color: "#5d5d5d",
                     line: {
                         visible: false
                     },
