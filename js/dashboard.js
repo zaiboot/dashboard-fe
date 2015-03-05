@@ -1,13 +1,13 @@
 //dashboard.js
 (function($) {
+	
 	var config = {
 		
 		Categories: [ "Not Started", "Pending", "Pending Modification", "Waiting on Review", 
 			"Review Pending Recertification", "Waiting on Approval", "Approval Pending Recertification",
 			"Complete"	
 		],
-		Series: [
-			
+		Series: [			
 			{
 				name: "Due Prior",
 				data: [ 
@@ -62,7 +62,8 @@
 			}
 		]
 	};
-	$("#chart").kendoChart({
+	
+	var chartConfig =  {
                 title: {
                     text: "Chart for"
                 },
@@ -106,11 +107,16 @@
                     visible: true,
                     template: "#= series.name #: #= value #"
                 }
-            });
+            };
+	
           $(document).ready(function() {
-          	$("#panelbar").kendoPanelBar({
+          	kendo.ui.progress($("#panelbar"), true);
+			$("#panelbar").kendoPanelBar({
             	expandMode: "single"
             });
+			$("#chart").kendoChart(chartConfig);
+			
+			
             
           });
 })($)
