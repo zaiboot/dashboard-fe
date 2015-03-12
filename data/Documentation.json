@@ -1,0 +1,12 @@
+﻿[
+    { type: 'info', text: 'rwfsf', link: 'www.google.com' },
+    { type: 'info', text: 'test', link: 'www.google.com' },
+    { type: 'info', text: 'pdf test', link: 'www.google.com' },
+    { type: 'info', text: 'qsqew', link: 'www.google.com' },
+    { type: 'info', text: 'Test', link: 'www.google.com' },
+    { type: 'info', text: 'UNC Upload', link: 'www.google.com' },
+    { type: 'info', text: 't', link: 'www.google.com' },
+    { type: 'info', text: 'qewqeq', link: 'www.google.com' },
+    { type: 'info', text: 'testIE11', link: 'www.google.com' },
+    { type: 'info', text: 'vdfds', link: 'www.google.com' }
+]
