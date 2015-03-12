@@ -1,0 +1,31 @@
+#chart { background-color: #f6f6f6;}
+#chart svg g[clip-path] path {cursor:pointer;}
+.panels > li { 
+	display: inline-block;
+	width: 49%;
+	border: thin solid red;
+	vertical-align: top;
+	overflow: visible;
+}
+.icon {
+	height: 24px;
+	padding-left: 24px;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+.alerts li {
+	display: block;
+	vertical-align: top;
+}
+.alerts .info {
+	background-image: url('../image/information.gif');
+}
+
+.alerts .delete {
+	background-image: url('../image/delete.gif');
+}
+.panels  li  .title {
+	font-weight: bold;
+	display: block;
+	vertical-align: top;
+}

@@ -1,6 +1,16 @@
 //dashboard.js
 (function($) {
 	
+	var spinner = {
+		show: function(selector) {
+			window.kendo.ui.progress($(selector), true);
+			
+		},
+		hide: function(selector){
+			window.kendo.ui.progress($(selector), false);			
+		}
+		
+	};
 	var config = {
 		
 		Categories: [ "Not Started", "Pending", "Pending Modification", "Waiting on Review", 
@@ -83,6 +93,13 @@
                   	stack: true,
 					
                 },
+				render: function(e) {
+					
+					/*setTimeout(function() {
+						spinner.hide("#chart");
+					}, 1000);*/
+					
+				},
 				seriesClick: function(e) {					
 					console.log("Category = ", e.category, " Series.name", e.series.name);
 					
@@ -110,12 +127,9 @@
             };
 	
           $(document).ready(function() {
-          	kendo.ui.progress($("#panelbar"), true);
-			$("#panelbar").kendoPanelBar({
-            	expandMode: "single"
-            });
-			$("#chart").kendoChart(chartConfig);
-			
+			spinner.show("#chart");
+			debugger;
+			$("#chart").kendoChart(chartConfig);	
 			
             
           });
