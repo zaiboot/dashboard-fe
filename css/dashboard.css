@@ -1,8 +1,7 @@
 #chart { background-color: #f6f6f6;}
 #chart svg g[clip-path] path {cursor:pointer;}
 .panels > li { 
-	display: inline-block;
-	width: 49%;
+	float: left;
 	border: thin solid red;
 	vertical-align: top;
 	overflow: visible;
@@ -13,6 +12,28 @@
 	background-repeat: no-repeat;
 	display: inline-block;
 }
+.alerts {
+	width: 322px;
+	height: 491px;
+}
+#newsInfo {
+	width: 307px;
+	height: 158px;
+}
+
+.documentation {
+	width: 297px;
+	height: 158px;
+}
+#reconStatistics {
+	width: 620px;
+	height: 361px;
+}
+.alerts {
+	width: 322px;
+	height: 491px;
+}
+
 .alerts li {
 	display: block;
 	vertical-align: top;
@@ -28,4 +49,8 @@
 	font-weight: bold;
 	display: block;
 	vertical-align: top;
+}
+
+.k-loading-mask {
+	position: relative;
 }

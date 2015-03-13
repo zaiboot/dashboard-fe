@@ -128,7 +128,13 @@
 	
           $(document).ready(function() {
 			spinner.show("#chart");
-			debugger;
+			spinner.show("#newsInfo .loading");
+			
+			$.get("data/alerts.json")
+				.done(function(data) {
+					console.log(data);
+					
+				});
 			$("#chart").kendoChart(chartConfig);	
 			
             
