@@ -1,0 +1,18 @@
+﻿[
+            {
+                 name: "Due Prior",
+                 data: 100
+            },
+            {
+                name: "Today",
+                data: 90
+            },
+            {
+                name: "This week",
+                data: 190
+            },
+            {
+                name: "After This week",
+                data: 190
+            }
+]
