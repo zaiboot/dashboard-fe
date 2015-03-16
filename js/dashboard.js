@@ -128,7 +128,6 @@
 
         $("#horizontal").kendoSplitter({
             panes: [
-                {  resizable: false, size: "450px" },
                 {  resizable: false, }
             ]
         });
